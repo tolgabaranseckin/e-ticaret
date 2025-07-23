@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Fotoğraf Galerim</title>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
 <style>
 body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding: 0;
   background: #121212;
   color: #fff;
 }
@@ -29,14 +29,14 @@ header {
   padding: 20px;
 }
 
-.gallery img {
+.gallery a img {
   width: 100%;
   border-radius: 8px;
   transition: transform 0.3s ease;
   cursor: pointer;
 }
 
-.gallery img:hover {
+.gallery a:hover img {
   transform: scale(1.05);
   box-shadow: 0 0 10px rgba(255,255,255,0.2);
 }
@@ -52,19 +52,23 @@ footer {
 <body>
 
 <header>
-  📸 Fotoğraf Galerim
+  📸 Şık Fotoğraf Galerim
 </header>
 
 <div class="gallery">
-  <img src="images/foto1.jpg" alt="Foto 1">
-  <img src="images/foto2.jpg" alt="Foto 2">
-  <img src="images/foto3.jpg" alt="Foto 3">
-  <img src="images/foto4.jpg" alt="Foto 4">
+  <a href="images/foto1.jpg" class="glightbox"><img src="images/foto1.jpg" alt=""></a>
+  <a href="images/foto2.jpg" class="glightbox"><img src="images/foto2.jpg" alt=""></a>
+  <a href="images/foto3.jpg" class="glightbox"><img src="images/foto3.jpg" alt=""></a>
+  <a href="images/foto4.jpg" class="glightbox"><img src="images/foto4.jpg" alt=""></a>
 </div>
 
 <footer>
   &copy; 2025 Benim Galerim
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+<script>
+const lightbox = GLightbox();
+</script>
 </body>
 </html>
